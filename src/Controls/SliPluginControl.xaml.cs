@@ -41,7 +41,8 @@ namespace SimElation.Simhub.SliPlugin
 		private void OnHelpClick(object sender, System.Windows.RoutedEventArgs e)
 		{
 			const String rootUrl = "https://github.com/simelation/simhub-plugins/blob";
-			String branch = "master", version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+			String branch = "master";
+			String version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 			int index = version.LastIndexOf(".");
 
 			if (index != -1)
@@ -50,7 +51,7 @@ namespace SimElation.Simhub.SliPlugin
 				branch = String.Format("%40simelation/simhub-sli-plugin%40{0}", tagVersion);
 			}
 
-			String url = String.Format("{0}/{1}/packages/sli-plugin/README.md", rootUrl, branch);
+			String url = String.Format("{0}/{1}/packages/simhub-sli-plugin/README.md#Features", rootUrl, branch);
 			System.Diagnostics.Process.Start(url);
 		}
 
